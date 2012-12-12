@@ -1,13 +1,9 @@
-	   __                             __ ______     __ 
-	  / /_____  _____________  ____  / //_  __/  __/ /_
-	 / __/ __ \/ ___/ ___/ _ \/ __ \/ __// / | |/_/ __/
-	/ /_/ /_/ / /  / /  /  __/ / / / /_ / / _>  </ /_  
-	\__/\____/_/  /_/   \___/_/ /_/\__//_/ /_/|_|\__/  
+torrentTxt
+==========
 	                                                   
 Author: Leland Batey
 
-Description
-===========
+##Description##
 torrentTxt monitors a directory and whenever a file is added, you will receive a txt message (via Twilio) with the name of the file added. This makes a great addition to a seedbox that automatically adds torrents from an RSS feed, so you know exactly when you've got new downloads!
 
 Notes:
