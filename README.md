@@ -24,7 +24,8 @@ Instructions:
 -------------
 1. Edit the torrentTxt.py file so that it has the correct settings for your needs. This means setting the appropriate directory to watch, your Twilio account SID and Auth Key, as well as the correct send and receive phone numbers.
 2. Set up a cron job to run the torrentTxt.py at a suitable interval. An example that runs every 5 minutes:
-		*/5 * * * * /path/to/python /path/to/torrentTxt.py
+		
+	`*/5 * * * * /path/to/python /path/to/torrentTxt.py`
 	- Note that if you are using a virtualenvironment (something I highly recommend) then "/path/to/python" will be "/path/to/virtualenv/**bin/python**"
 3. ???
 4. Profit!
