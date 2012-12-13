@@ -9,6 +9,7 @@ torrentTxt monitors a directory and whenever a file is added, you will receive a
 Notes:
 ------
 torrentTxt is meant to be installed as a cronJob that runs every few minutes.
+I recommend setting up your torrent client to save all .torrent files to a particular directory and then having torrentTxt watch that directory. That when a torrent file is added, you only recieve the one notification.
 
 Requirements:
 -------------
