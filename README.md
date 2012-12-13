@@ -22,6 +22,6 @@ Instructions:
 2. Set up a cron job to run the torrentTxt.py at a suitable interval. An example that runs every 5 minutes:
 		
 		*/5 * * * * /path/to/python /path/to/torrentTxt.py
-	- Note that if you are using a virtualenvironment (something I highly recommend) then "/path/to/python" will be "/path/to/virtualenv/[b]bin/python[/b]"
+	- Note that if you are using a virtualenvironment (something I highly recommend) then "/path/to/python" will be "/path/to/virtualenv/*bin/python*"
 3. ???
 4. Profit!
