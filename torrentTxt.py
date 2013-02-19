@@ -30,6 +30,7 @@ token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 client = TwilioRestClient(account, token)
 fromNumber = "+xxxxxxxxxxx" # The number that registered to your Twilio account that you want to use to send texts from.
 toNumber = "+xxxxxxxxxxx" # The number you want to recieve text messages about the files added. This is probably your cell phone number.
+# Note: this can also be a list of phone numbers, so that you can have multiple people receive text messages.
 
 # Enter the full path to the directory that you want monitored
 searchDir = "XxXxXxX"
@@ -72,7 +73,11 @@ def mainHandler():
 		knownNames.write(writeString)
 		knownNames.close()
 
-		client.sms.messages.create(to=toNumber, from_=fromNumber, body=buildString)
+		if isinstance(toNumber,list):
+			for j in toNumber:
+				client.sms.messages.create(to=j, from_=fromNumber, body=buildString)
+		elif isinstance(toNumber,str):
+			client.sms.messages.create(to=toNumber, from_=fromNumber, body=buildString)
 
 def readDir(): # Gets the list of all files in the directory that is being monitored
 	searchCommand = "find ."
